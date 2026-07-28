@@ -1,3 +1,10 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
