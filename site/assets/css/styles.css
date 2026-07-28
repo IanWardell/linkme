@@ -45,6 +45,7 @@ html {
 
 body {
   min-height: 100vh;
+  min-height: 100svh;
   margin: 0;
   overflow-x: hidden;
   color: var(--text);
@@ -106,6 +107,7 @@ button {
   z-index: 1;
   display: grid;
   min-height: 100vh;
+  min-height: 100svh;
   place-items: center;
   padding: 42px 18px;
 }
@@ -435,7 +437,8 @@ h1 {
 
 @media (max-width: 620px) {
   .page-shell {
-    padding: 20px 12px;
+    place-items: start center;
+    padding: 10px 12px 14px;
   }
 
   .profile-card {
@@ -444,7 +447,15 @@ h1 {
   }
 
   .profile-header {
-    padding-inline: 3px;
+    padding: 0 3px 20px;
+  }
+
+  .identity-row {
+    margin-bottom: 18px;
+  }
+
+  .profile-footer {
+    margin-top: 18px;
   }
 }
 
