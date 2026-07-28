@@ -1,0 +1,5 @@
+# Confirm public_html is the document root for ianwardell.com in cPanel.
+# This cron line can bootstrap itself: it clones the repository when missing,
+# then fetches and deploys the newest release branch on every later run.
+
+*/5 * * * * /bin/bash -lc 'R="$HOME/repositories/linkme"; if [ ! -d "$R/.git" ]; then mkdir -p "$(dirname "$R")" && git clone --depth 1 --branch release https://github.com/IanWardell/linkme.git "$R"; fi; REPO_URL="https://github.com/IanWardell/linkme.git" BRANCH="release" CHECKOUT_DIR="$R" WEB_ROOT="$HOME/public_html" /bin/bash "$R/scripts/deploy-hostgator.sh"' >> "$HOME/ianwardell.deploy.log" 2>&1
