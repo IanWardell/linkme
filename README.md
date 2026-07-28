@@ -56,7 +56,7 @@ bash scripts/validate-site.sh
 
 ## Deployment
 
-Publish the contents of `site/` to your web root. An optional deployment helper is included in `scripts/` for the current hosting environment.
+Publish the contents of `site/` with any static hosting provider.
 
 ## License
 
